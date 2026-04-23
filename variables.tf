@@ -201,3 +201,18 @@ variable "encrypt_type" {
   type        = string
   description = "Encryption for ECR"
 }
+
+variable "alb_name" {
+  type        = string
+  description = "Application Loadbalancer Name"
+}
+
+variable "tg_name" {
+  type        = string
+  description = "ALB's target Group Name"
+}
+
+variable "github_repo" {
+  type        = string
+  description = "GitHub repository name"
+}

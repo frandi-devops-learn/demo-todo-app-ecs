@@ -79,3 +79,9 @@ image = "MUTABLE"
 scan = true
 
 encrypt_type = "AES256"
+
+alb_name = "demo-todo-alb"
+
+tg_name = "demo-todo-bk-tg"
+
+github_repo = "frandi-devops-learn/demo-todoapp"

@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  profile = "frandi"
+  profile = "devops"
 }
 
 locals {

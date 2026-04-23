@@ -1,5 +1,5 @@
 locals {
-  services = ["ecr.dkr", "ecr.api", "logs", "ssmmessages"]
+  services = ["ecr.dkr", "ecr.api", "logs", "secretsmanager", "ssmmessages"]
 }
 
 resource "aws_vpc_endpoint" "demo_interfaces" {
