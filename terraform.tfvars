@@ -85,3 +85,5 @@ alb_name = "demo-todo-alb"
 tg_name = "demo-todo-bk-tg"
 
 github_repo = "frandi-devops-learn/demo-todoapp"
+
+force_delete = true

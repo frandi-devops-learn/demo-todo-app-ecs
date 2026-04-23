@@ -42,3 +42,15 @@ output "private_subnet_ids" {
   description = "The IDs of the private subnets"
   value       = aws_subnet.priv_subnets[*].id
 }
+
+# --- GITHUB OIDC Information ---
+output "github_actions_role_arn" {
+  description = "ARN of the IAM role for GitHub Actions OIDC"
+  value       = aws_iam_role.demo-todo-github_actions_role.arn
+}
+
+# --- Application Information ---
+output "app_url" {
+  description = "URL to access the demo application"
+  value       = "http://${aws_lb.demo_alb.dns_name}"
+}

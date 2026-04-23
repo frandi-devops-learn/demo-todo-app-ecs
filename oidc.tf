@@ -38,7 +38,7 @@ resource "aws_iam_role_policy_attachment" "ecr_power_user" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser"
 }
 
-# 4. Optional: Add ECS deployment permissions
+# 4. Add ECS deployment permissions
 resource "aws_iam_role_policy" "ecs_deploy" {
   name = "ecs-deploy-policy"
   role = aws_iam_role.demo-todo-github_actions_role.id
@@ -46,7 +46,13 @@ resource "aws_iam_role_policy" "ecs_deploy" {
     Version = "2012-10-17"
     Statement = [{
       Effect   = "Allow"
-      Action   = ["ecs:UpdateService", "ecs:DescribeServices"]
+      Action   = [
+        "ecs:UpdateService", 
+        "ecs:DescribeServices", 
+        "ecs:DescribeTaskDefinition", 
+        "ecs:RegisterTaskDefinition", 
+        "ecs:DescribeTasks"
+      ]
       Resource = [aws_ecs_service.backend_service.arn]
     }]
   })

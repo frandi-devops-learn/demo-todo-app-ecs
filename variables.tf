@@ -216,3 +216,8 @@ variable "github_repo" {
   type        = string
   description = "GitHub repository name"
 }
+
+variable "force_delete" {
+  type        = bool
+  description = "Delete ECR even existing images"
+}

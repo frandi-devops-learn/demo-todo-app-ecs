@@ -10,6 +10,8 @@ resource "aws_ecr_repository" "demo_ecr" {
     encryption_type = var.encrypt_type
   }
 
+  force_delete = var.force_delete
+
   tags = merge(local.common_tags, {
     Name = "${var.ecr_name}"
   })
